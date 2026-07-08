@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{ masthead }} — {{ date_str }}</title>
+<style>
+  @page { size: Letter; margin: 11mm 16mm 9mm 16mm; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+    color: #111;
+    background: #fff;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    border-bottom: 3px double #111;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+  }
+  .masthead-top {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Menlo', 'SF Mono', Consolas, monospace;
+    font-size: 6.5pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #777;
+    border-bottom: 1px solid #111;
+    padding-bottom: 3px;
+    margin-bottom: 4px;
+  }
+  .nameplate {
+    font-family: 'Big Caslon', 'Iowan Old Style', Georgia, serif;
+    font-weight: 900;
+    font-size: 38pt;
+    text-align: center;
+    letter-spacing: 0.01em;
+    line-height: 1;
+    margin: 2px 0 2px 0;
+  }
+  .nameplate-the {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.72em;
+    vertical-align: middle;
+  }
+  .nameplate-name {
+    color: {{ accent_color }};
+    font-style: italic;
+  }
+  .tagline {
+    text-align: center;
+    font-style: italic;
+    font-size: 8.5pt;
+    color: #777;
+    margin-bottom: 1px;
+  }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    font-family: 'Menlo', 'SF Mono', Consolas, monospace;
+    font-size: 6.5pt;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: {{ accent_color }};
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 7px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: {{ accent_color }};
+    opacity: 0.5;
+  }
+
+  /* ── TWO-COLUMN GRID ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 14px;
+    margin-top: 11px;
+  }
+  .col-rule { background: #ddd; }
+
+  /* ── CULTURE BITE ── */
+  .culture-wrap {
+    position: relative;
+    padding-left: 18px;
+  }
+  .culture-open-quote {
+    position: absolute;
+    left: 0;
+    top: -4px;
+    font-family: 'Big Caslon', Georgia, serif;
+    font-size: 38pt;
+    line-height: 1;
+    color: {{ accent_color }};
+    opacity: 0.35;
+    font-weight: 900;
+  }
+  .culture-quote {
+    font-size: 12pt;
+    font-style: italic;
+    line-height: 1.55;
+  }
+  .culture-answer {
+    display: block;
+    font-style: normal;
+    font-size: 10pt;
+    margin-top: 3px;
+    color: #444;
+  }
+  .culture-source {
+    margin-top: 7px;
+    font-family: 'Menlo', 'SF Mono', Consolas, monospace;
+    font-size: 6.5pt;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+
+  /* ── I CAN READ (Maetav) ── */
+  .i-can-read-box {
+    margin-top: 10px;
+    border-left: 3px solid {{ accent_color }};
+    padding: 6px 10px;
+  }
+  .i-can-read-text {
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-size: 15pt;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #111;
+    font-style: normal;
+  }
+
+  /* ── CM ACTIVITY (Maetav) ── */
+  .cm-activity {
+    margin-top: 10px;
+  }
+  .cm-activity-text {
+    font-size: 10.5pt;
+    line-height: 1.5;
+    font-style: italic;
+    color: #222;
+  }
+
+  /* ── MISSION ── */
+  .mission-title {
+    font-family: 'Big Caslon', 'Iowan Old Style', Georgia, serif;
+    font-weight: 700;
+    font-size: 16pt;
+    line-height: 1.15;
+    margin: 0 0 5px 0;
+  }
+  .mission-desc {
+    font-size: 10.5pt;
+    line-height: 1.5;
+    color: #222;
+  }
+  .mission-pts-tag {
+    display: inline-block;
+    margin-top: 5px;
+    font-family: 'Menlo', 'SF Mono', Consolas, monospace;
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: {{ accent_color }};
+    letter-spacing: 0.05em;
+  }
+
+  /* ── CHECKLIST ── */
+  .checklist-box { margin-top: 10px; }
+  .task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .task-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 4px 0;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 10.5pt;
+  }
+  .checkbox {
+    width: 10px; height: 10px;
+    border: 1.5px solid #555;
+    flex-shrink: 0;
+    margin-top: 3px;
+    display: inline-block;
+  }
+  .pts {
+    margin-left: auto;
+    font-family: 'Menlo', 'SF Mono', Consolas, monospace;
+    font-size: 8pt;
+    color: {{ accent_color }};
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  /* ── LISTENING BAND ── */
+  .listening-band {
+    margin-top: 10px;
+    border-top: 1.5px solid #ddd;
+    padding-top: 9px;
+  }
+  .listening-podcast-title {
+    font-family: 'Big Caslon', 'Iowan Old Style', Georgia, serif;
+    font-weight: 700;
+    font-size: 11pt;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .listening-teaser {
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #333;
+    font-style: italic;
+  }
+  .listening-music-piece {
+    font-weight: 700;
+    font-size: 10pt;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .listening-listen-for {
+    font-size: 9pt;
+    line-height: 1.45;
+    color: #333;
+  }
+  .listening-find {
+    margin-top: 4px;
+    font-family: 'Menlo', 'SF Mono', Consolas, monospace;
+    font-size: 6.5pt;
+    color: #888;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── JOURNAL PROMPT (Gershon) ── */
+  .journal-band {
+    margin-top: 10px;
+    border-left: 3px solid {{ accent_color }};
+    padding: 6px 10px;
+    background: transparent;
+  }
+  .journal-text {
+    font-size: 10pt;
+    line-height: 1.5;
+    font-style: italic;
+    color: #222;
+  }
+
+  /* ── ROUTINES BAND ── */
+  .routines-band {
+    margin-top: 11px;
+    border-top: 1.5px solid #111;
+    padding-top: 10px;
+  }
+
+  /* ── POINTS FOOTER ── */
+  .points-footer {
+    margin-top: 11px;
+    border-top: 2px solid #111;
+    padding-top: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .points-max {
+    font-family: 'Menlo', 'SF Mono', Consolas, monospace;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #555;
+    text-transform: uppercase;
+  }
+  .points-score-box {
+    font-family: 'Menlo', 'SF Mono', Consolas, monospace;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #111;
+    text-transform: uppercase;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+  }
+  .score-blank {
+    display: inline-block;
+    width: 44px;
+    border-bottom: 1.5px solid #111;
+    margin-bottom: -1px;
+  }
+  .gazette-footer {
+    margin-top: 3px;
+    text-align: center;
+    font-family: 'Menlo', 'SF Mono', Consolas, monospace;
+    font-size: 6pt;
+    color: #ccc;
+    letter-spacing: 0.06em;
+  }
+</style>
+</head>
+<body>
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-top">
+      <span>Edition No. {{ edition_number }}</span>
+      <span>{{ date_str }}</span>
+      <span>Home Edition</span>
+    </div>
+    <div class="nameplate">
+      <span class="nameplate-the">The</span>
+      <span class="nameplate-name"> {{ kid_name }} </span>
+      <span>{{ masthead_title }}</span>
+    </div>
+    <div class="tagline">{{ tagline }}</div>
+  </div>
+
+  <!-- TOP 2-COL: culture (left) | mission + checklist (right) -->
+  <div class="two-col">
+
+    <div>
+      <div class="section-label">{{ culture.type_label }}</div>
+      <div class="culture-wrap">
+        <span class="culture-open-quote">&ldquo;</span>
+        <div class="culture-quote">
+          {{ culture.text }}
+          {% if culture.answer %}<span class="culture-answer">Answer: {{ culture.answer }}</span>{% endif %}
+        </div>
+      </div>
+      {% if culture.source %}<div class="culture-source">— {{ culture.source }}</div>{% endif %}
+
+      {% if i_can_read %}
+      <div class="i-can-read-box">
+        <div class="section-label" style="margin-bottom:4px;">I Can Read</div>
+        <div class="i-can-read-text">{{ i_can_read.text }}</div>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="col-rule"></div>
+
+    <div>
+      <div class="section-label">Special Assignment</div>
+      <div class="mission-title">{{ mission.title }}</div>
+      <div class="mission-desc">{{ mission.description }}</div>
+      <div class="mission-pts-tag">+{{ mission.points }} pts</div>
+
+      {% if cm_activity %}
+      <div class="cm-activity">
+        <div class="section-label">Today's Activity</div>
+        <div class="cm-activity-text">{{ cm_activity.text }}</div>
+      </div>
+      {% endif %}
+
+      <div class="checklist-box">
+        <div class="section-label">Daily Checklist</div>
+        <ul class="task-list">
+          {% for c in checklist %}
+          <li><span class="checkbox"></span><span>{{ c.item }}</span><span class="pts">+{{ c.points }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      {% if journal_prompt %}
+      <div class="journal-band">
+        <div class="section-label" style="margin-bottom:4px;">Leonardo's Notebook</div>
+        <div class="journal-text">{{ journal_prompt.text }}</div>
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
+
+  <!-- LISTENING BAND -->
+  {% if listening %}
+  <div class="listening-band">
+    <div class="two-col" style="margin-top:0;">
+      <div>
+        <div class="section-label">Podcast of the Day</div>
+        <div class="listening-podcast-title">{{ listening.podcast_title }}</div>
+        <div class="listening-teaser">{{ listening.podcast_teaser }}</div>
+      </div>
+      <div class="col-rule"></div>
+      <div>
+        <div class="section-label">Music Corner</div>
+        <div class="listening-music-piece">{{ listening.music_composer }} — {{ listening.music_piece }}</div>
+        <div class="listening-listen-for">{{ listening.music_listen_for }}</div>
+        <div class="listening-find">{{ listening.music_find }}</div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- ROUTINES -->
+  {% if afternoon_routine or morning_routine %}
+  <div class="routines-band">
+    <div class="two-col" style="margin-top:0;">
+
+      <div>
+        <div class="section-label">This Afternoon</div>
+        <ul class="task-list">
+          {% for c in afternoon_routine %}
+          <li><span class="checkbox"></span><span>{{ c.item }}</span><span class="pts">+{{ c.points }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-rule"></div>
+
+      <div>
+        <div class="section-label">Tomorrow Morning</div>
+        <ul class="task-list">
+          {% for c in morning_routine %}
+          <li><span class="checkbox"></span><span>{{ c.item }}</span><span class="pts">+{{ c.points }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- FOOTER -->
+  <div class="points-footer">
+    <span class="points-max">Max today &nbsp;{{ max_points }} pts</span>
+    <span class="points-score-box">I scored <span class="score-blank"></span> / {{ max_points }}</span>
+  </div>
+  <div class="gazette-footer">{{ kid_name | upper }}'S GAZETTE &nbsp;·&nbsp; ISSUE {{ edition_number }}</div>
+
+</body>
+</html>

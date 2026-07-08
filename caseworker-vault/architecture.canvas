@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {"id":"title","type":"text","text":"# From messy reality to useful action\nA fictional AI-assisted child caseworking system","x":0,"y":-420,"width":620,"height":150,"color":"6"},
+    {"id":"raw-label","type":"text","text":"## 1. RAW EVIDENCE\nOriginal material is preserved. Facts, quotations, and interpretations remain distinguishable.","x":-760,"y":-120,"width":360,"height":180,"color":"1"},
+    {"id":"raw-school","type":"file","file":"raw/school/2026-05-14-teacher-meeting.md","x":-760,"y":120,"width":360,"height":260,"color":"1"},
+    {"id":"raw-voice","type":"file","file":"raw/voice-notes/2026-05-22-after-school-brain-dump.md","x":-760,"y":440,"width":360,"height":260,"color":"1"},
+    {"id":"rules","type":"file","file":"AGENTS.md","x":-180,"y":-160,"width":360,"height":300,"color":"3"},
+    {"id":"wiki-label","type":"text","text":"## 2. LIVING WIKI\nThe AI synthesizes sources, preserves uncertainty, cites evidence, and maintains the current picture.","x":40,"y":260,"width":420,"height":190,"color":"4"},
+    {"id":"profile","type":"file","file":"wiki/child-profile.md","x":-200,"y":520,"width":340,"height":260,"color":"4"},
+    {"id":"questions","type":"file","file":"wiki/open-questions.md","x":200,"y":520,"width":340,"height":260,"color":"4"},
+    {"id":"action-label","type":"text","text":"## 3. DECISIONS AND ACTION\nThe system turns context into meeting preparation, experiments, ownership, and follow-through.","x":700,"y":-120,"width":390,"height":190,"color":"5"},
+    {"id":"gaps","type":"file","file":"wiki/school-meeting-gap-analysis.md","x":620,"y":150,"width":350,"height":250,"color":"5"},
+    {"id":"plan","type":"file","file":"wiki/school-meeting-plan.md","x":1020,"y":150,"width":350,"height":250,"color":"5"},
+    {"id":"tasks","type":"file","file":"wiki/upcoming-tasks.md","x":820,"y":500,"width":350,"height":250,"color":"5"}
+  ],
+  "edges": [
+    {"id":"e1","fromNode":"raw-school","fromSide":"right","toNode":"profile","toSide":"left","label":"evidence"},
+    {"id":"e2","fromNode":"raw-voice","fromSide":"right","toNode":"questions","toSide":"left","label":"unresolved context"},
+    {"id":"e3","fromNode":"rules","fromSide":"bottom","toNode":"wiki-label","toSide":"top","label":"governs synthesis"},
+    {"id":"e4","fromNode":"profile","fromSide":"right","toNode":"gaps","toSide":"left","label":"current understanding"},
+    {"id":"e5","fromNode":"questions","fromSide":"right","toNode":"gaps","toSide":"left","label":"knowledge gaps"},
+    {"id":"e6","fromNode":"gaps","fromSide":"right","toNode":"plan","toSide":"left","label":"meeting design"},
+    {"id":"e7","fromNode":"plan","fromSide":"bottom","toNode":"tasks","toSide":"right","label":"owners and deadlines"}
+  ]
+}

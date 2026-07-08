@@ -1,0 +1,779 @@
+{
+  "kid_name": "Maya",
+  "masthead": "THE MAYA HERALD",
+  "masthead_title": "",
+  "tagline": "All the news fit to read.",
+  "accent_color": "#2E6F8E",
+  "culture_bites": [
+    {
+      "type": "quote",
+      "text": "Who is rich? One who is happy with what he has.",
+      "source": "Pirkei Avot 4:1"
+    },
+    {
+      "type": "quote",
+      "text": "Well done is better than well said.",
+      "source": "Benjamin Franklin"
+    },
+    {
+      "type": "quote",
+      "text": "It is not incumbent upon you to complete the work, but neither are you free to desist from it.",
+      "source": "Pirkei Avot 2:16"
+    },
+    {
+      "type": "quote",
+      "text": "We hold these truths to be self-evident, that all men are created equal.",
+      "source": "The Declaration of Independence, 1776"
+    },
+    {
+      "type": "quote",
+      "text": "The palest ink is better than the best memory.",
+      "source": "Chinese Proverb"
+    },
+    {
+      "type": "quote",
+      "text": "Whoever saves a single life is considered to have saved an entire world.",
+      "source": "Mishnah Sanhedrin 4:5"
+    },
+    {
+      "type": "quote",
+      "text": "I have not failed. I've just found 10,000 ways that won't work.",
+      "source": "Thomas Edison"
+    },
+    {
+      "type": "story",
+      "text": "A fox saw grapes hanging high on a vine and leapt again and again to reach them. When he could not, he walked away muttering that they were probably sour anyway.",
+      "source": "Aesop, 'The Fox and the Grapes'"
+    },
+    {
+      "type": "quote",
+      "text": "Give me liberty, or give me death!",
+      "source": "Patrick Henry, 1775"
+    },
+    {
+      "type": "story",
+      "text": "A shepherd boy cried 'Wolf!' so many times as a joke that when a real wolf came, no one believed him, and the flock was lost.",
+      "source": "Aesop, 'The Boy Who Cried Wolf'"
+    },
+    {
+      "type": "quote",
+      "text": "Torah study is equal to all the other commandments combined.",
+      "source": "Mishnah Peah 1:1"
+    },
+    {
+      "type": "quote",
+      "text": "An investment in knowledge pays the best interest.",
+      "source": "Benjamin Franklin"
+    },
+    {
+      "type": "quote",
+      "text": "Do not do unto others what is hateful to you; that is the whole Torah, the rest is commentary.",
+      "source": "Hillel, Talmud Shabbat 31a"
+    },
+    {
+      "type": "quote",
+      "text": "The measure of a man is what he does with power.",
+      "source": "Attributed to Plato"
+    },
+    {
+      "type": "quote",
+      "text": "The unexamined life is not worth living.",
+      "source": "Socrates, in Plato's Apology"
+    },
+    {
+      "type": "story",
+      "text": "Socrates taught by asking questions, not by giving answers. He said he knew nothing — and that this was the beginning of wisdom.",
+      "source": "Plato, The Apology"
+    },
+    {
+      "type": "quote",
+      "text": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+      "source": "Attributed to Aristotle (via Will Durant)"
+    },
+    {
+      "type": "quote",
+      "text": "Give me a lever long enough and a fulcrum on which to place it, and I shall move the world.",
+      "source": "Archimedes"
+    },
+    {
+      "type": "story",
+      "text": "Euclid was asked by King Ptolemy whether there was a shortcut to learning geometry. He replied: 'There is no royal road to geometry.'",
+      "source": "Attributed to Euclid, via Proclus"
+    },
+    {
+      "type": "quote",
+      "text": "The whole is more than the sum of its parts.",
+      "source": "Aristotle, Metaphysics"
+    },
+    {
+      "type": "story",
+      "text": "When Alexander the Great was young, Aristotle was his teacher. Alexander said that from his father Philip he received life, but from Aristotle he received the knowledge of how to live well.",
+      "source": "Plutarch, Life of Alexander"
+    },
+    {
+      "type": "story",
+      "text": "Cato the Elder was already old when someone asked why he was learning Greek. He replied: 'I do not want to die knowing nothing.'",
+      "source": "Plutarch, Life of Cato the Elder"
+    },
+    {
+      "type": "quote",
+      "text": "If you would not be forgotten as soon as you are dead, either write things worth reading, or do things worth writing.",
+      "source": "Benjamin Franklin"
+    },
+    {
+      "type": "quote",
+      "text": "Associate yourself with men of good quality if you esteem your own reputation.",
+      "source": "George Washington"
+    },
+    {
+      "type": "quote",
+      "text": "I cannot live without books.",
+      "source": "Thomas Jefferson, in a letter to John Adams, 1815"
+    },
+    {
+      "type": "story",
+      "text": "When asked what kind of government the Constitutional Convention had produced, Franklin replied: 'A Republic, if you can keep it.'",
+      "source": "Benjamin Franklin, 1787"
+    },
+    {
+      "type": "quote",
+      "text": "The shepherd drives the wolf from the sheep's throat, for which the sheep thanks the shepherd as a liberator, while the wolf denounces him for the same act.",
+      "source": "Abraham Lincoln"
+    },
+    {
+      "type": "story",
+      "text": "Archimedes leapt from his bath and ran through the streets crying 'Eureka!' — 'I have found it!' — after realizing that a body submerged in water displaces its own volume. He had solved the king's problem without touching the crown.",
+      "source": "Vitruvius, De Architectura"
+    },
+    {
+      "type": "riddle",
+      "text": "I have cities but no houses, mountains but no trees, and water but no fish. What am I?",
+      "answer": "A map."
+    },
+    {
+      "type": "quote",
+      "text": "In the beginning God created the heavens and the earth.",
+      "source": "Genesis 1:1"
+    },
+    {
+      "type": "story",
+      "text": "Cincinnatus was plowing his fields when messengers arrived to tell him Rome had made him dictator. He put down his plow, saved Rome, then returned to his farm — all within two weeks.",
+      "source": "Livy, History of Rome"
+    },
+    {
+      "type": "quote",
+      "text": "Educate your children to self-control, to the habit of holding passion and prejudice and evil tendencies subject to an upright and reasoning will.",
+      "source": "Noah Webster"
+    },
+    {
+      "type": "quote",
+      "text": "A good conscience is a continual feast.",
+      "source": "Robert Burton, The Anatomy of Melancholy"
+    },
+    {
+      "type": "story",
+      "text": "Alexander came to the knot at Gordium — a knot so tangled that legend said whoever untied it would rule all of Asia. He drew his sword and cut it in half. The prophecy was fulfilled.",
+      "source": "Plutarch, Life of Alexander"
+    },
+    {
+      "type": "quote",
+      "text": "I had rather excel others in the knowledge of what is excellent, than in the extent of my power and dominion.",
+      "source": "Plutarch, Life of Alexander"
+    },
+    {
+      "type": "story",
+      "text": "As a boy, Alexander tamed the horse Bucephalus, which had thrown every rider. He saw that the horse was frightened by its own shadow, so he turned it to face the sun — and rode it himself.",
+      "source": "Plutarch, Life of Alexander"
+    },
+    {
+      "type": "story",
+      "text": "The pirates who kidnapped young Julius Caesar demanded a ransom. Caesar laughed at how small it was and told them to ask for more. He promised to come back and crucify them when he was free. He did.",
+      "source": "Plutarch, Life of Caesar"
+    },
+    {
+      "type": "story",
+      "text": "Solon, the lawgiver of Athens, was asked if he had given the Athenians the best laws possible. He replied: 'The best they were able to receive.'",
+      "source": "Plutarch, Life of Solon"
+    },
+    {
+      "type": "quote",
+      "text": "Laws are like spider-webs: they will hold the weak and delicate who might be caught in their meshes, but will be torn in pieces by the rich and powerful.",
+      "source": "Solon of Athens, in Plutarch's Lives"
+    },
+    {
+      "type": "story",
+      "text": "The Spartans sent their boys to live in groups away from home at age seven. They slept on reeds they cut themselves, went barefoot in all weather, and learned by doing.",
+      "source": "Plutarch, Life of Lycurgus"
+    },
+    {
+      "type": "quote",
+      "text": "Neither a borrower nor a lender be; for loan oft loses both itself and friend.",
+      "source": "Shakespeare, Hamlet (Polonius)"
+    },
+    {
+      "type": "quote",
+      "text": "All the world's a stage, and all the men and women merely players.",
+      "source": "Shakespeare, As You Like It"
+    },
+    {
+      "type": "quote",
+      "text": "What a piece of work is a man! How noble in reason, how infinite in faculty!",
+      "source": "Shakespeare, Hamlet"
+    },
+    {
+      "type": "quote",
+      "text": "The quality of mercy is not strained. It droppeth as the gentle rain from heaven upon the place beneath.",
+      "source": "Shakespeare, The Merchant of Venice"
+    },
+    {
+      "type": "quote",
+      "text": "We know what we are, but know not what we may be.",
+      "source": "Shakespeare, Hamlet"
+    },
+    {
+      "type": "story",
+      "text": "Leonardo da Vinci kept notebooks his whole life — filled with drawings of machines, studies of birds, maps of rivers, and notes on everything he saw. He filled over 13,000 pages. He wrote backwards, so others could not easily read them.",
+      "source": "Giorgio Vasari, Lives of the Artists"
+    },
+    {
+      "type": "quote",
+      "text": "Learning never exhausts the mind.",
+      "source": "Leonardo da Vinci, Notebooks"
+    },
+    {
+      "type": "quote",
+      "text": "Iron rusts from disuse; water loses its purity from stagnation; even so does inaction sap the vigor of the mind.",
+      "source": "Leonardo da Vinci, Notebooks"
+    },
+    {
+      "type": "story",
+      "text": "Leonardo designed a flying machine by studying how birds move their wings. He dissected birds and bats to understand the bones underneath. He never built a plane, but he was right about almost everything — it just took 400 more years.",
+      "source": "Leonardo da Vinci, Codex Atlanticus"
+    },
+    {
+      "type": "story",
+      "text": "Archimedes designed war machines to defend the city of Syracuse. His cranes lifted Roman ships out of the water and dropped them. Roman soldiers became so afraid they would flee if they saw so much as a rope hanging over the city walls.",
+      "source": "Plutarch, Life of Marcellus"
+    },
+    {
+      "type": "quote",
+      "text": "The noblest pleasure is the joy of understanding.",
+      "source": "Leonardo da Vinci, Notebooks"
+    },
+    {
+      "type": "story",
+      "text": "George Washington lost more battles than he won, but he never lost hope. He kept his ragged army together through a brutal winter at Valley Forge — hungry, cold, and without boots — and emerged to win the war.",
+      "source": "Washington Irving, Life of Washington"
+    },
+    {
+      "type": "quote",
+      "text": "Observe good faith and justice toward all nations. Cultivate peace and harmony with all.",
+      "source": "George Washington, Farewell Address, 1796"
+    },
+    {
+      "type": "quote",
+      "text": "I am not an Athenian or a Greek, but a citizen of the world.",
+      "source": "Attributed to Socrates, via Plutarch"
+    }
+  ],
+  "missions": [
+    {
+      "title": "Make omelets for the whole family",
+      "description": "Crack, whisk, and cook dinner for everyone tonight. Bonus points for cleanup.",
+      "points": 15
+    },
+    {
+      "title": "Laundry apprentice",
+      "description": "Sort a load by color, start the wash, and learn where the settings are.",
+      "points": 10
+    },
+    {
+      "title": "Fold and put away a load of laundry",
+      "description": "Fold it properly and deliver it to the right rooms.",
+      "points": 10
+    },
+    {
+      "title": "Sew on a button",
+      "description": "Ask Mom to show you once, then do the next one yourself.",
+      "points": 12
+    },
+    {
+      "title": "Set and clear the table for dinner",
+      "description": "Full setup, and clear it after everyone's done.",
+      "points": 8
+    },
+    {
+      "title": "Sourdough helper",
+      "description": "Feed the starter and help shape a loaf.",
+      "points": 10
+    },
+    {
+      "title": "Fix something small",
+      "description": "Find one loose screw, wobbly chair, or squeaky hinge and fix it (ask for help if needed).",
+      "points": 12
+    },
+    {
+      "title": "Learn one knife skill",
+      "description": "Practice dicing an onion or slicing vegetables safely, with supervision.",
+      "points": 12
+    },
+    {
+      "title": "Grocery run planning",
+      "description": "Help write the grocery list by checking what's actually in the fridge and pantry.",
+      "points": 8
+    },
+    {
+      "title": "Basic bike maintenance",
+      "description": "Check tire pressure and oil the chain on one bike.",
+      "points": 12
+    },
+    {
+      "title": "Cook a side dish solo",
+      "description": "Pick a simple recipe and make it yourself, start to finish.",
+      "points": 15
+    },
+    {
+      "title": "Errand on your own",
+      "description": "Walk to the corner store for one specific item and bring back correct change.",
+      "points": 10
+    },
+    {
+      "title": "Deep clean your desk",
+      "description": "Clear it off completely, wipe it down, and only put back what belongs.",
+      "points": 8
+    },
+    {
+      "title": "Teach Maetav something",
+      "description": "Pick one thing you know how to do and teach it to your sister.",
+      "points": 10
+    },
+    {
+      "title": "Plan and cook breakfast for the family this weekend",
+      "description": "Pick the menu, make the list, and cook it.",
+      "points": 15
+    },
+    {
+      "title": "Sweep and mop one room",
+      "description": "Sweep first, then mop. Leave the floor dry before you're done.",
+      "points": 10
+    },
+    {
+      "title": "Clean the bathroom sink and mirror",
+      "description": "Wipe down the sink, faucet, and mirror until they shine.",
+      "points": 8
+    },
+    {
+      "title": "Take out all the trash and replace the bags",
+      "description": "Every bin in the house — kitchen, bathrooms, all of them.",
+      "points": 8
+    },
+    {
+      "title": "Write a letter to someone",
+      "description": "Pick someone you don't talk to enough — a grandparent, a relative, an old friend. Write a real letter by hand and send it.",
+      "points": 12
+    },
+    {
+      "title": "Teach Adrian something",
+      "description": "Spend 15 minutes with Adrian doing something he can actually learn — stacking, building, a simple game. Not screen time.",
+      "points": 10
+    },
+    {
+      "title": "Read aloud to Maetav",
+      "description": "Pick a chapter book she'd enjoy and read 15 minutes to her. Let her ask questions.",
+      "points": 8
+    },
+    {
+      "title": "Unpack and put away groceries",
+      "description": "Full unpack — everything goes where it belongs, not on the counter.",
+      "points": 8
+    },
+    {
+      "title": "Make salad dressing from scratch",
+      "description": "Look up a basic vinaigrette, make it, and dress the salad for dinner.",
+      "points": 10
+    },
+    {
+      "title": "Bike shop helper",
+      "description": "Come to the shop and do one real job — sweeping, sorting parts, holding something for Andres. Not just watching.",
+      "points": 12
+    },
+    {
+      "title": "Organize a shelf or drawer",
+      "description": "Pick one chaotic drawer or shelf, empty it, decide what stays and what goes, and put it back in order.",
+      "points": 10
+    },
+    {
+      "title": "Wash all the dinner dishes",
+      "description": "Every dish, pot, and utensil — washed, rinsed, and left to dry. No leftovers on the counter.",
+      "points": 10
+    },
+    {
+      "title": "Wipe down the bathroom",
+      "description": "Cleaning spray and a cloth: sink, faucet, mirror, and shelf. Leave it better than you found it.",
+      "points": 10
+    },
+    {
+      "title": "Write a recipe card",
+      "description": "Pick something you know how to make. Write it out clearly — ingredients, steps, amounts — so someone else could follow it.",
+      "points": 10
+    },
+    {
+      "title": "Plan and cook a dinner",
+      "description": "Decide what to make, write the shopping list, help shop, and cook it. The whole chain.",
+      "points": 15
+    },
+    {
+      "title": "Draw a map of the neighborhood",
+      "description": "From memory first — streets, landmarks, our building. Then go outside and check how accurate you were.",
+      "points": 12
+    },
+    {
+      "title": "Narrate back a chapter",
+      "description": "Read one chapter of your current book and write one paragraph: what happened, in your own words, no looking back.",
+      "points": 10
+    },
+    {
+      "title": "Build something from scratch",
+      "description": "Cardboard, tape, whatever's around. Design it first on paper, then build it. Anything — a structure, a tool, a contraption.",
+      "points": 12
+    },
+    {
+      "title": "Iron a shirt",
+      "description": "With supervision: set up the board, learn the settings, iron one shirt properly.",
+      "points": 12
+    },
+    {
+      "title": "Sweep the living room and kitchen",
+      "description": "Corners, under furniture, all of it. Sweep into a pile and dispose of it.",
+      "points": 8
+    },
+    {
+      "title": "Wash breakfast dishes before school",
+      "description": "Everything from this morning — before you leave. Clean counter too.",
+      "points": 8
+    },
+    {
+      "title": "Learn a recipe by heart",
+      "description": "Pick one dish you've made before. Next time: no recipe, no looking. Cook it from memory.",
+      "points": 12
+    },
+    {
+      "title": "Wipe down the kitchen after dinner",
+      "description": "Counters, stove top, table — spray and wipe everything down once dinner is cleared.",
+      "points": 8
+    },
+    {
+      "title": "Knit while you listen",
+      "description": "Set up with your knitting nancy and a podcast episode. Knit the whole time — no stopping. This is your thinking-and-making time.",
+      "points": 8
+    },
+    {
+      "title": "Finish a cord and make something from it",
+      "description": "Knit a cord long enough to actually use — coil it into a coaster, tie it into a bracelet, or make a bookmark. Finish it properly.",
+      "points": 12
+    },
+    {
+      "title": "Teach Maetav to use the knitting nancy",
+      "description": "Show her how to cast on, how to knit a round, and how to keep the tension even. Be patient — she gets at least 10 minutes of your full attention.",
+      "points": 10
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Practice piano (20 min)",
+      "points": 5
+    },
+    {
+      "item": "Straighten your room",
+      "points": 4
+    },
+    {
+      "item": "Homework / reading done",
+      "points": 5
+    },
+    {
+      "item": "Independent reading (20 min)",
+      "points": 4
+    }
+  ],
+  "afternoon_routine": [
+    {
+      "item": "Bags and shoes in their place",
+      "points": 2
+    },
+    {
+      "item": "Tidy up after dinner and play",
+      "points": 3
+    },
+    {
+      "item": "Brush teeth",
+      "points": 2
+    },
+    {
+      "item": "Get into PJs",
+      "points": 2
+    }
+  ],
+  "morning_routine": [
+    {
+      "item": "Get dressed",
+      "points": 2
+    },
+    {
+      "item": "Check your bag",
+      "points": 2
+    },
+    {
+      "item": "Pack water bottle and food",
+      "points": 2
+    },
+    {
+      "item": "Brush teeth",
+      "points": 2
+    }
+  ],
+  "journal_prompts": [
+    {
+      "text": "What is one thing you learned or noticed today? Write it in 2–3 sentences — as if explaining it to someone who has never heard of it."
+    },
+    {
+      "text": "Draw or describe an invention that would solve a problem in our house. What does it do and how does it work? Label your drawing."
+    },
+    {
+      "text": "If you could ask one question to any person from history, who would it be and what would you ask? What do you think they would say?"
+    },
+    {
+      "text": "Think about something you read recently. What surprised you most? Write one sentence about it."
+    },
+    {
+      "text": "Describe one thing you observed carefully today — outdoors, in the kitchen, anywhere. Describe it so precisely that someone could picture it without having seen it."
+    },
+    {
+      "text": "What is something hard that you are getting better at? Write about how it felt at first and how it feels now."
+    },
+    {
+      "text": "Write one thing that you believe is true, and one question you cannot yet answer."
+    },
+    {
+      "text": "If you were designing a machine to do one household task, what would it be? Sketch it and label the parts, the way Leonardo would."
+    },
+    {
+      "text": "What is the most interesting thing you know that most people your age don't know? Write it down."
+    },
+    {
+      "text": "Write about a mistake you made this week and what you would do differently. Leonardo wrote his mistakes in his notebook too."
+    },
+    {
+      "text": "Who is someone you admire, from history or now? Write one specific thing they did that you would like to do someday."
+    },
+    {
+      "text": "Write one sentence about water, one about fire, and one about air — as if you are a Greek philosopher trying to explain what the world is made of."
+    },
+    {
+      "text": "Describe what you ate today as if you were writing a field report from an explorer who has never tasted these foods before."
+    },
+    {
+      "text": "What question has been bothering you lately — something you genuinely don't know the answer to? Write it down as carefully as you can."
+    },
+    {
+      "text": "Write one rule you think everyone should live by. Then explain why. Give one example of someone who broke it and what happened."
+    },
+    {
+      "text": "Think of something you read or learned this week. State it in one sentence — then ask: so what? Write your answer."
+    },
+    {
+      "text": "Describe the view from the window as precisely as you can — as if you are making a field map of what you see."
+    },
+    {
+      "text": "If you had to teach one subject at school tomorrow, what would you teach and how would you begin the first five minutes?"
+    },
+    {
+      "text": "Write about something that seemed simple but turned out to be more complicated than you thought."
+    },
+    {
+      "text": "Archimedes filled his notebook with problems he was trying to solve. What is one problem — in math, in the house, in the world — that you want to solve? Write it down."
+    }
+  ],
+  "listening": [
+    {
+      "podcast_title": "Johann Sebastian Bach",
+      "podcast_teaser": "As a boy, Bach secretly copied out his brother's forbidden music book by moonlight — page by page — so he could learn it himself.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "J.S. Bach",
+      "music_piece": "Toccata and Fugue in D minor",
+      "music_listen_for": "A fugue is like a chase: one voice starts a melody, then another voice enters with the same melody slightly later. Can you hear the two voices following each other?",
+      "music_find": "Search 'Bach Toccata Fugue D minor organ' on Spotify."
+    },
+    {
+      "podcast_title": "Wolfgang Amadeus Mozart",
+      "podcast_teaser": "Mozart played piano for real kings and queens at age 6. His father said that when he was just 4, he could learn a minuet in 30 minutes — perfectly.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "W.A. Mozart",
+      "music_piece": "Symphony No. 40 in G minor",
+      "music_listen_for": "The opening is urgent and restless — something is unsettled. Can you feel it? Then it shifts. Listen for when the mood changes.",
+      "music_find": "Search 'Mozart Symphony 40' on Spotify."
+    },
+    {
+      "podcast_title": "Ludwig van Beethoven",
+      "podcast_teaser": "Beethoven went completely deaf, yet continued to write music. His greatest symphony was composed when he could hear nothing. At the premiere, he stood on stage — the audience was cheering behind him and he did not know it.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Ludwig van Beethoven",
+      "music_piece": "Symphony No. 5, First Movement",
+      "music_listen_for": "Four notes: short, short, short, LONG. Count how many times that pattern comes back in different forms throughout the movement.",
+      "music_find": "Search 'Beethoven Symphony 5 Karajan' on Spotify."
+    },
+    {
+      "podcast_title": "George Frideric Handel",
+      "podcast_teaser": "Handel wrote the entire Messiah oratorio in 24 days — 260 pages of music. He said when he wrote the Hallelujah Chorus, he felt he saw 'the heavens opened.'",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "G.F. Handel",
+      "music_piece": "Hallelujah Chorus (from Messiah)",
+      "music_listen_for": "When this was first performed in London, the king stood up. Everyone stood with him. The tradition continues today. Does the music make you want to stand?",
+      "music_find": "Search 'Handel Hallelujah Chorus' on Spotify."
+    },
+    {
+      "podcast_title": "Antonio Vivaldi",
+      "podcast_teaser": "Vivaldi taught music at an orphanage in Venice. He wrote over 500 concertos — so many that one critic complained he was writing the same concerto 500 times. Vivaldi disagreed.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Antonio Vivaldi",
+      "music_piece": "Summer (from The Four Seasons), 3rd movement",
+      "music_listen_for": "This is a violent thunderstorm — lightning, hail, rain. The violin flies. Can you hear the storm build, peak, and crash?",
+      "music_find": "Search 'Vivaldi Summer Four Seasons' on Spotify."
+    },
+    {
+      "podcast_title": "Edvard Grieg",
+      "podcast_teaser": "Grieg grew up in Norway, surrounded by mountains and fjords. He said the trolls and elves of Norwegian folklore were always in his imagination when he wrote.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Edvard Grieg",
+      "music_piece": "In the Hall of the Mountain King",
+      "music_listen_for": "This starts as a quiet, sneaking melody. Then it gets LOUDER and FASTER — something is chasing something. Mark the exact moment it crosses from quiet to dangerous.",
+      "music_find": "Search 'Grieg Hall of the Mountain King' on Spotify."
+    },
+    {
+      "podcast_title": "Pyotr Ilyich Tchaikovsky",
+      "podcast_teaser": "Tchaikovsky was asked what music felt like from the inside. He said: 'Sometimes it is as if some external, mysterious force takes hold of you. Then you feel as if it is not you writing, but some power working through you.'",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Pyotr Tchaikovsky",
+      "music_piece": "1812 Overture — finale",
+      "music_listen_for": "This was written to celebrate Russia's defeat of Napoleon. The finale uses real cannons. Can you hear the moment the battle is won?",
+      "music_find": "Search 'Tchaikovsky 1812 Overture finale' on Spotify."
+    },
+    {
+      "podcast_title": "Johannes Brahms",
+      "podcast_teaser": "Brahms waited until age 43 to finish his first symphony because he felt he could not write one worthy of Beethoven. When it was done, a conductor called it 'Beethoven's 10th.'",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Johannes Brahms",
+      "music_piece": "Symphony No. 1, 4th movement",
+      "music_listen_for": "Brahms builds slowly to a giant, hymn-like melody. Some say it sounds like Beethoven's Ode to Joy. Do you think so?",
+      "music_find": "Search 'Brahms Symphony 1 finale' on Spotify."
+    },
+    {
+      "podcast_title": "Modest Mussorgsky",
+      "podcast_teaser": "Mussorgsky wrote music that sounds like storytelling. His 'Pictures at an Exhibition' was inspired by paintings — each movement is a different picture in a gallery, and the 'Promenade' is you walking between them.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Modest Mussorgsky",
+      "music_piece": "Pictures at an Exhibition — The Great Gate of Kiev",
+      "music_listen_for": "This is the finale — a massive, triumphant gate. The music grows and grows. How many layers of sound can you identify at the peak?",
+      "music_find": "Search 'Mussorgsky Pictures Exhibition Great Gate Kiev' on Spotify."
+    },
+    {
+      "podcast_title": "Camille Saint-Saëns",
+      "podcast_teaser": "Saint-Saëns was a child prodigy who memorized all 32 of Beethoven's piano sonatas before age 10. He once offered to perform any of them from memory — and the audience chose. He played them all.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Camille Saint-Saëns",
+      "music_piece": "Danse Macabre",
+      "music_listen_for": "Midnight. A skeleton rises and plays the violin — out of tune on purpose. This was considered shocking in 1874. The oboe plays a rooster at the end to signal dawn. Can you hear it?",
+      "music_find": "Search 'Saint-Saëns Danse Macabre' on Spotify."
+    },
+    {
+      "podcast_title": "Franz Joseph Haydn",
+      "podcast_teaser": "Haydn worked for the same wealthy family for 30 years. When they kept the musicians too long before a vacation, he wrote a symphony where, one by one, each musician blows out his candle and walks off stage — until only two violinists remain.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Franz Joseph Haydn",
+      "music_piece": "Farewell Symphony (No. 45), finale",
+      "music_listen_for": "Listen to how the orchestra shrinks. Each musician stops playing and leaves. By the very end, what instruments remain?",
+      "music_find": "Search 'Haydn Farewell Symphony finale' on Spotify."
+    },
+    {
+      "podcast_title": "Sergei Prokofiev",
+      "podcast_teaser": "Prokofiev wrote Peter and the Wolf specifically to teach children what each instrument in the orchestra sounds like. Every character has one: strings = Peter, flute = bird, oboe = duck, French horn = wolf.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Sergei Prokofiev",
+      "music_piece": "Peter and the Wolf — the Wolf's theme",
+      "music_listen_for": "Three French horns play the wolf — low, prowling, circling. Can you feel the danger? How does the music make the wolf feel powerful?",
+      "music_find": "Search 'Prokofiev Peter and the Wolf' on Spotify."
+    },
+    {
+      "podcast_title": "Antonín Dvořák",
+      "podcast_teaser": "Dvořák came to America in 1892. He said American music — especially the spirituals sung by freed slaves — was the truest, most original American art form he had heard.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Antonín Dvořák",
+      "music_piece": "New World Symphony, 4th movement",
+      "music_listen_for": "This finale has thunder, drama, and a sense of a great journey ending. Listen for the brass opening — does it feel like a proclamation?",
+      "music_find": "Search 'Dvorak New World Symphony finale' on Spotify."
+    },
+    {
+      "podcast_title": "Robert Schumann",
+      "podcast_teaser": "Schumann wrote two different kinds of music under two invented names: Florestan (fiery, impulsive) and Eusebius (dreamy, gentle). He felt he was really two different people, and music let him be both.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Robert Schumann",
+      "music_piece": "Kinderszenen (Scenes from Childhood) — Träumerei",
+      "music_listen_for": "Träumerei means 'Dreaming.' It is barely three minutes long. Listen without moving. What do you see?",
+      "music_find": "Search 'Schumann Träumerei Kinderszenen' on Spotify."
+    },
+    {
+      "podcast_title": "Igor Stravinsky",
+      "podcast_teaser": "The premiere of Stravinsky's Rite of Spring caused a riot in the theater. The audience hissed, booed, and threw things. Stravinsky fled out the back. Today it is considered one of the greatest pieces ever written.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Igor Stravinsky",
+      "music_piece": "The Rite of Spring — Introduction",
+      "music_listen_for": "It begins with a bassoon at the very top of its range — almost a squeak. Then other instruments join, one at a time. Does the opening sound strange to you? Why might an 1913 audience have been shocked?",
+      "music_find": "Search 'Stravinsky Rite of Spring Bernstein' on Spotify."
+    },
+    {
+      "podcast_title": "Gustav Holst",
+      "podcast_teaser": "Holst wrote The Planets Suite — one movement per planet. He was fascinated by astrology. He said each planet had a personality. Mars is the Bringer of War. Jupiter is the Bringer of Jollity.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Gustav Holst",
+      "music_piece": "Mars, the Bringer of War (from The Planets)",
+      "music_listen_for": "This is in 5/4 time — not the usual 4. Count 1-2-3-4-5, 1-2-3-4-5 as it plays. This irregular rhythm makes it feel unstoppable. Can you feel the march?",
+      "music_find": "Search 'Holst Mars Bringer of War Planets Suite' on Spotify."
+    },
+    {
+      "podcast_title": "Frédéric Chopin",
+      "podcast_teaser": "Chopin almost never performed in large concert halls — he was too shy. He preferred small rooms with 20 friends. He said, 'A public crowd intimidates me and I feel asphyxiated by its breath.'",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Frédéric Chopin",
+      "music_piece": "Ballade No. 1 in G minor",
+      "music_listen_for": "This is one of the most dramatic piano pieces ever written. It starts quietly, almost like a story beginning — then explodes. Guess when the storm starts.",
+      "music_find": "Search 'Chopin Ballade No 1 Pollini' on Spotify."
+    },
+    {
+      "podcast_title": "Felix Mendelssohn",
+      "podcast_teaser": "Mendelssohn rediscovered Bach's music and performed it after it had been forgotten for 100 years. Without him, we might not know Bach's St. Matthew Passion today.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Felix Mendelssohn",
+      "music_piece": "Violin Concerto in E minor, 1st movement",
+      "music_listen_for": "Most concertos make the orchestra play first. Mendelssohn has the violin enter almost immediately — urgent, singing. Does the solo violin sound like a voice?",
+      "music_find": "Search 'Mendelssohn Violin Concerto E minor' on Spotify."
+    },
+    {
+      "podcast_title": "Franz Schubert",
+      "podcast_teaser": "Schubert wrote over 600 songs, 8 symphonies, and much more — in only 31 years of life. He once wrote 8 pieces in a single day. He often wrote music on restaurant menus and napkins when he ran out of paper.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Franz Schubert",
+      "music_piece": "Symphony No. 8 (Unfinished), 1st movement",
+      "music_listen_for": "Schubert wrote only two movements and never explained why he stopped. The opening has a mysterious, low theme. Does it feel like something unresolved — something left unsaid?",
+      "music_find": "Search 'Schubert Unfinished Symphony' on Spotify."
+    },
+    {
+      "podcast_title": "Georges Bizet",
+      "podcast_teaser": "Bizet's opera Carmen was called a failure at its premiere. He died three months later, at 36, devastated. Within a year, it became one of the most performed operas in the world. He never knew.",
+      "podcast_url": "classicsforkids.com",
+      "music_composer": "Georges Bizet",
+      "music_piece": "Carmen — Overture",
+      "music_listen_for": "The overture sets up all the main themes before the curtain rises. Listen for the bold, triumphant march — then the dark, swirling theme of fate. Two different moods: what contrast do you hear?",
+      "music_find": "Search 'Bizet Carmen Overture' on Spotify."
+    }
+  ]
+}

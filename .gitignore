@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Generated output — don't commit today's newspaper
+kid-gazette/output/
+kid-gazette/archive/
+
+# State — personal rotation tracking, don't commit
+kid-gazette/state/*.json
+
+# Keep the gitkeeps
+!kid-gazette/output/.gitkeep
+!kid-gazette/archive/.gitkeep
+!kid-gazette/state/.gitkeep
+
+# macOS
+.DS_Store
+
+# Obsidian workspace state (personal, not portable)
+caseworker-vault/.obsidian/workspace.json
+caseworker-vault/.obsidian/workspace-mobile.json
