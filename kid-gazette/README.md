@@ -1,106 +1,137 @@
-# Kid Gazette — Setup Guide
+# Kid Gazette
 
-A daily printed "newspaper" for Gershon and Maetav: a quote/story, a rotating
-life-skill mission, and a fixed checklist, each with point values. Fully
-automated — it should just be sitting in the printer tray when they get home.
+A daily printed newspaper for your kid. A quote, a rotating household mission,
+a fixed daily checklist — each with point values. Runs on a schedule. Should
+just be sitting in the printer tray when they get home.
 
-## 1. One-time setup on the Mac mini
+---
 
+## Getting started (non-technical)
+
+You don't need to write any code or edit any configuration files to set this up.
+You need two things: [Claude Code](https://claude.ai/code) and a printer.
+
+**Step 1 — Describe your kid.**
+
+Open `MY_CHILD.md` in any text editor and fill it out. It asks about your
+child's personality and interests, the values and texts you want to pass on,
+the household skills you want them to build, and what their daily routine
+looks like. Plain English. No special format required.
+
+This is the important step — and it's yours to do. The AI doesn't know your
+kid. It doesn't know that your family reads Mishnah at dinner, or that your
+daughter is obsessed with maps and miniature architecture, or that you want her
+doing real cooking by age ten. You do. Write it down.
+
+**Step 2 — Hand it to Claude Code.**
+
+Open Claude Code in this folder and say:
+
+> "Set up the gazette for [child's name] using MY_CHILD.md."
+
+Claude will read your profile and generate a complete content bank: 40+ culture
+bites drawn from the sources you named, 30+ household missions calibrated to
+your kid's age and your household, and a checklist that matches your daily
+routine. It handles the JSON and the configuration. You don't touch any of it.
+
+**Step 3 — Preview it.**
+
+Claude will run a preview automatically. You'll see the newspaper open in your
+browser — check that it looks right and that the content feels like your kid.
+If something's off, say so and Claude will adjust.
+
+**Step 4 — Set up the schedule.**
+
+Tell Claude Code what time you want it to print and which printer to use. It
+will set up the cron job. After that, it runs on its own.
+
+---
+
+## Adding more content
+
+The content bank rotates without repeats until exhausted, then reshuffles. With
+40+ entries per section you'll get months without repetition. You can always add
+more:
+
+> "Add 15 more culture bites for [name] focused on ancient Rome."
+
+> "Add 10 more missions for [name] — she's old enough to do more in the kitchen now."
+
+Claude reads the existing bank and appends to it. Your existing content isn't
+touched.
+
+---
+
+## Points
+
+Each newspaper prints the point value next to every checklist item and the
+day's mission, plus a total for the day. It works as a physical receipt.
+
+To track a running balance:
+
+> "Maya earned 25 points today."
+
+> "Check the points balance."
+
+Or directly:
 ```bash
-# Install Homebrew packages
-brew install wkhtmltopdf
+python3 scripts/points.py earn maya 25
+python3 scripts/points.py redeem maya 50 "ice cream"
+python3 scripts/points.py balance all
+```
 
-# Install Python packages
+---
+
+## Technical setup (if you prefer to do it yourself)
+
+**Dependencies:**
+```bash
+brew install wkhtmltopdf
 pip3 install jinja2 --break-system-packages
 ```
 
-Copy this whole `kid_gazette` folder somewhere permanent, e.g. `~/kid_gazette`.
-
-Find your printer's exact name (needed for the cron job):
+**Test run (no printing):**
 ```bash
-lpstat -p
+python3 scripts/generate.py maya --no-print
 ```
-That prints something like `printer HP_OfficeJet_Pro is idle...` — the name
-after `printer` is what you'll use.
+Open `output/maya_today.html` in a browser to check.
 
-## 2. Test it manually first
-
-```bash
-cd ~/kid_gazette
-python3 scripts/generate.py gershon --printer "HP_OfficeJet_Pro"
-python3 scripts/generate.py maetav --printer "HP_OfficeJet_Pro"
+**Cron (6 AM Mon–Fri):**
+```
+0 6 * * 1-5 cd ~/kid-gazette && /usr/bin/python3 scripts/generate.py maya --printer "Your_Printer_Name" >> logs.txt 2>&1
 ```
 
-If you don't pass `--printer`, it uses your Mac's default printer. Add
-`--no-print` while testing to skip printing and just check the PDF in
-`output/`.
+Find your printer name: `lpstat -p`
 
-## 3. Automate it with cron
-
-Since arrival time varies (12:30–3:30), the simplest reliable approach is to
-print early each morning so it's already waiting — rather than trying to
-time it to arrival.
-
-```bash
-crontab -e
-```
-
-Add (adjust the path and printer name):
-```
-0 6 * * 1-5 cd ~/kid_gazette && /usr/bin/python3 scripts/generate.py all --printer "HP_OfficeJet_Pro" >> logs.txt 2>&1
-```
-This runs at 6:00 AM, Monday–Friday, and prints both kids' editions.
-
-Note: Macs must be awake (not asleep) for cron to fire. If your Mac mini
-sleeps, either disable sleep, or add a `pmset` scheduled wake a few minutes
-before 6 AM:
+**Mac sleep note:** cron won't fire if the Mac is asleep. On a Mac mini or
+desktop, schedule a wake before the cron fires:
 ```bash
 sudo pmset repeat wakeorpoweron MTWRF 05:55:00
 ```
 
-## 4. Editing content
+**Calendar integration (optional):** if you have a custody or schedule
+calendar in iCal format, the gazette can skip printing on days when the kids
+aren't home. Set `GAZETTE_CALENDAR_PATH` to your `.ics` file and configure
+`GAZETTE_PRINT_PREFIX` / `GAZETTE_SKIP_PREFIX` to match your event naming
+convention.
 
-Everything rotates from two files — edit these anytime, no code changes
-needed:
-- `content_bank/gershon.json`
-- `content_bank/maetav.json`
+---
 
-Each has three lists:
-- `culture_bites` — quotes, short stories, riddles (type: `quote`, `story`, or `riddle`)
-- `missions` — the rotating "Special Assignment" (life skills, chores, errands)
-- `checklist` — the fixed daily items (same every day, e.g. piano, room)
-
-The generator cycles through each list in a shuffled order without repeats,
-then reshuffles once it's been through everything — so content won't feel
-repetitive even with ~10-15 entries per list. Add as many as you want.
-
-## 5. Points
-
-Each newspaper prints the point value next to every checklist item and the
-day's mission, plus a "max points today" total — it works as a physical
-receipt for the folder.
-
-For tracking a running balance digitally (optional — not required, the
-paper folder works fine on its own):
-```bash
-python3 scripts/points.py earn gershon 25
-python3 scripts/points.py redeem gershon 50 "ice cream"
-python3 scripts/points.py balance all
-```
-
-## 6. Files
+## File layout
 
 ```
-kid_gazette/
-├── content_bank/       # edit these to change content
-│   ├── gershon.json
-│   └── maetav.json
+kid-gazette/
+├── MY_CHILD.md          ← fill this out first
+├── CLAUDE.md            ← instructions for Claude Code
+├── CONTENT_STYLE_GUIDE.md  ← reference for content quality
+├── content_bank/        ← generated JSON files, one per kid
 ├── templates/
-│   └── newspaper.html  # the design — edit CSS here if you want to restyle
+│   └── newspaper.html   ← print layout; edit CSS here to restyle
 ├── scripts/
-│   ├── generate.py     # main daily generator + printer
-│   └── points.py       # optional digital points ledger
-├── state/               # auto-managed rotation state + ledger, don't edit
-├── output/              # today's HTML/PDF for each kid
-└── archive/              # dated copy of every issue ever printed
+│   ├── generate.py      ← main generator
+│   ├── calendar_check.py  ← optional schedule-based skip logic
+│   └── points.py        ← optional points ledger
+├── state/               ← auto-managed rotation state; don't edit
+├── output/              ← today's HTML/PDF
+└── archive/             ← dated copy of every issue ever printed
 ```

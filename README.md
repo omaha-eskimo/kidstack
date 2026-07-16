@@ -133,6 +133,24 @@ If you build something on top of this, I'd like to hear about it.
 
 ---
 
+## The division of labor
+
+The most important thing I figured out building this:
+
+**You hold the knowledge. The AI holds the labor.**
+
+You know your kid responds well to intellectual identity framing. You know they're obsessed with Roman engineering. You know your family reads Mishnah at dinner and cares about the American founding. You know which household skills you want them to have by the time they leave home. None of that is in any training dataset. It lives in your head.
+
+What the AI is good at: taking that knowledge and generating 40 well-chosen Pirkei Avot quotes with accurate citations, 30 age-calibrated household missions, a point system, a print layout. Given your inputs, it can produce in minutes what would take you days — and it won't run out of material.
+
+This is why the onboarding for the gazette isn't "here's the JSON schema, go fill it in." It's a plain-English questionnaire about your kid — their interests, your values, the texts you care about, the skills you want to teach. You fill that out. You hand it to Claude Code. Claude Code writes the content bank.
+
+The same principle applies to the caseworker vault. You're not prompting the AI to figure out what matters about your child — you're feeding it everything you already know, and asking it to maintain, synthesize, and surface it on demand.
+
+This is different from "AI as expert." The AI is not the expert on your kid. You are. The AI is a very fast, very patient research assistant and content generator that works with what you give it.
+
+---
+
 ## Credits
 
 - Andrej Karpathy — [LLM Wiki](https://karpathy.ai/llmwiki) concept
