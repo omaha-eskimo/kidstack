@@ -88,17 +88,17 @@ Claude Code reads the vault, surfaces the relevant evidence, drafts questions gr
 
 ## What makes this worth the setup
 
-A one-off AI conversation forgets everything when the session ends. A maintained vault means the AI always has the full picture — years of observations, what different practitioners have said, where they disagree, what's been tried and what worked. You can ask "what's changed since October" and get an actual answer.
+A direct chat with consumer AI forgets context as the conversation goes longer, or when the session ends. A maintained library centered around your child gives the AI a more reliable basis for its reasoning — years of observations, what different practitioners have said, where they disagree, what's been tried and what worked. You can ask "what's changed since October" and get an answer based on real context that you control. Treat AI as the engine in your car, not the car itself. 
 
-The gazette solves a different problem: consistent delivery. It's easy to think "I should expose my kid to more classical music, or more Stoic philosophy, or more real cooking." It's hard to make that happen reliably every day. The gazette does it without you having to think about it.
+The gazette solves a different problem: consistent delivery. If you ever think to yourself "I should expose my kid to more classical music, or more Stoic philosophy, or more real cooking," you know how hard it is to make that happen reliably every day. This is how I've started experimenting with developing better habits at home, in a fun way that my kids are enjoying.
 
-**The most important thing I figured out building this:**
+**The most important thing:**
 
 You, the parent, hold the knowledge. The AI holds the labor.
 
-You know what your kid will respond wellto, what they are obsessed with, what your family talks about at dinner, the cadence of your week, what skills you'd like your child to master. All of that lives in your head, for each of your children.
+You know what your kid will respond well to, the topics they are drawn to, what your family talks about at dinner, the cadence of your week, what skills or habits you'd like your child to focus on. All of that lives in your head, for each of your children.
 
-The AI's job is to take that knowledge and turn it into 40 well-sourced culture bites, 30 calibrated missions, a print layout, a meeting brief. Given your input, it produces in minutes what would take you days. You are not asking the AI to figure out what matters about your child. You are the expert on your child. You're asking the AI to do the labor.
+AI's job is to take that knowledge and turn it into 40 well-sourced culture bites, 30 calibrated missions, a print layout, a meeting brief. Given your input, it produces in minutes what would take you days. You are not asking the AI to figure out what matters about your child. You are the expert on your child. You're asking the AI to do the labor.
 
 ---
 
@@ -108,7 +108,7 @@ Things not yet in this repo:
 
 - **Travel activities** — Personalized printed activity booklets for each kid for a trip: Built from their knowledge bases, printed and folded.
 - **Daily family brief** — Life ops. Set up the home in 5 minutes for the after school rhythm. Generated from the calendar and the knowledge bases.
-- **Video content curation** — a queue of podcast and YouTube content matched to each kid's current interests and my values and aesthetics, updated from the vault.
+- **Video content curation** — a queue of curated podcast and video content matched to each kid's current interests and my values and aesthetics, updated from the vault.
 - **Physical library catalogue** — our family's catalogue of books, served to life ops and the gazette for learning progression and activity management.
 
 If you build something on top of this, I'd love to hear about it.
