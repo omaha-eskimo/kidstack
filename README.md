@@ -151,10 +151,17 @@ This is different from "AI as expert." The AI is not the expert on your kid. You
 
 ---
 
+## Related: tradclaw
+
+[tradclaw](https://github.com/ChatPRD/tradclaw) by [@clairevo](https://x.com/clairevo) is an OpenClaw scaffold for household ops — calendar briefs, school triage, meal planning, shopping lists, helper payments, custom bedtime stories. It's the daily logistics layer.
+
+The two projects sit at different levels. Tradclaw handles what happens today: what's on the calendar, what's for dinner, what came in from school. The caseworker vault handles what's true over years: who your child is, what the evidence shows, what's been tried. They're meant to be used together — tradclaw answers "what do I need to do this morning," the caseworker vault answers "what do I know about my kid and how do I advocate for them."
+
 ## Credits
 
 - Andrej Karpathy — [LLM Wiki](https://karpathy.ai/llmwiki) concept
 - Ben Kamens — [hstack](https://github.com/kamens/hstack) for the health caseworker application
+- Claire Vo ([@clairevo](https://x.com/clairevo)) — [tradclaw](https://github.com/ChatPRD/tradclaw) for the household ops companion
 
 ---
 
