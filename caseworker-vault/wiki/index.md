@@ -17,6 +17,11 @@
 - [[home-environment-plan]]
 - [[upcoming-tasks]]
 
+## Gazette
+
+- [[gazette-profile]]
+- [[gazette-log]]
+
 ## System
 
 - [[start-here]]

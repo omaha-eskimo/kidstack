@@ -73,6 +73,27 @@ is a working hypothesis rather than confirmed fact.
 **"What are the open questions"** — read `wiki/open-questions.md` and group by
 theme (school, home, clinical, relational).
 
+## Gazette integration
+
+**"Log gazette feedback"** or **"[name] didn't respond to [content]"**
+
+Append a dated entry to `wiki/gazette-log.md` with whatever the parent
+observed — what landed, what didn't, emerging interests, current energy level.
+Keep it short. Don't restructure existing entries.
+
+**"Update the gazette profile"**
+
+Re-read `wiki/child-profile.md`, `wiki/strengths-and-needs.md`,
+`wiki/home-environment-plan.md`, and `wiki/gazette-log.md`. Refresh the
+observation-based sections of `wiki/gazette-profile.md` (what's working,
+what isn't, active interests, quiet time note). Leave the "Curatorial choices"
+section untouched — that belongs to the parent.
+
+When ingesting a new caseworker source, if it contains information clearly
+relevant to gazette content (new interest, a noted regulation need, a skill
+milestone), add a short note to `wiki/gazette-log.md` under "Emerging
+interests to feed" or "Skills in progress" so it isn't lost.
+
 ## Non-negotiable rules (from AGENTS.md)
 
 - Never invent events, diagnoses, quotations, or professional recommendations.

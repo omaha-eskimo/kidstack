@@ -77,6 +77,24 @@ commands.
 Claude Code reads the current wiki and produces an agenda, a list of evidence-
 grounded questions to bring, and a note on what gaps the meeting could fill.
 
+### Keeping the gazette connected
+
+The vault feeds the daily newspaper through two pages: `wiki/gazette-profile.md`
+(the current picture of what to put in front of this kid and why) and
+`wiki/gazette-log.md` (running notes on what's landing and what isn't).
+
+Drop short notes into the gazette log any time something is worth recording —
+a culture bite that didn't land, a mission that went unusually well, a new
+interest that showed up out of nowhere. When the gazette starts feeling stale
+or you've accumulated a few weeks of log entries, run a curation pass:
+
+> "Curate Maya's gazette" *(said in the kid-gazette folder with Claude Code)*
+
+Claude Code will read both the caseworker wiki and the gazette log, recommend
+additions and retirements to the content bank, and update the gazette profile
+to reflect the current picture. The newspaper keeps adapting without you having
+to manage it by hand.
+
 ### Getting a current picture
 
 > "What's changed since May?"

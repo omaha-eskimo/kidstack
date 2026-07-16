@@ -93,6 +93,41 @@ content for [name]":
 - 3–5 items maximum. This is the non-negotiable daily baseline.
 - Only things that happen every single day without exception.
 
+## Curation from the caseworker vault
+
+**"Curate [name]'s gazette"** or **"Do a curation pass for [name]"**
+
+This is the main command for keeping the gazette connected to what you know
+about your kid. Run it when the content feels stale, when a kid's interests
+have shifted, or after a few weeks of gazette-log entries have accumulated.
+
+Steps:
+1. Ask the user where their caseworker vault is (or look for it nearby).
+2. Read `wiki/gazette-profile.md`, `wiki/gazette-log.md`,
+   `wiki/child-profile.md`, and `wiki/strengths-and-needs.md`.
+3. Read the current `content_bank/[name].json`.
+4. Produce a curation report:
+   - What to add (new culture bites, missions, or listening entries based
+     on current interests and the caseworker picture)
+   - What to retire (entries that have been logged as not landing, or that
+     no longer fit the kid's age or current state)
+   - What to weight toward (themes or skill areas to favor in the next batch)
+   - Quiet time / regulation note: if the gazette-log or caseworker wiki
+     suggests the kid needs more recovery, flag sections to lighten
+   - Book suggestions for quiet reading time based on current level and interests
+5. Ask the user to confirm before making any changes to the content bank.
+6. After applying changes, append a curation summary to
+   `wiki/gazette-log.md` under "Curation history."
+7. Update `wiki/gazette-profile.md` sections "What's working," "What isn't
+   working," and "Active interests to feed" to reflect the current picture.
+
+**"Seed [name]'s gazette-profile from the caseworker vault"**
+
+For first-time setup when a caseworker vault already exists. Reads
+`wiki/child-profile.md` and `wiki/strengths-and-needs.md` and drafts the
+observation-based sections of `wiki/gazette-profile.md`. Leaves the
+curatorial choices section blank for the parent to fill in.
+
 ## Other commands
 
 **"Preview the gazette for [name]"**
