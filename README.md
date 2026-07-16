@@ -1,26 +1,26 @@
 # Child Knowledge Stack
 
-Two tools for parents who want AI that actually knows their kid.
+A catalogued library for parents to maintain and deepen their knowledge about their kids, plus a daily newspaper to help those kids learn skills, stay on top of chores, and get a daily taste of culture.
 
-**The caseworker vault** — an Obsidian knowledge base that keeps everything
+**The caseworker vault** — a library that keeps everything
 you know about your child organized, synthesized, and ready for school
-meetings, clinical appointments, and high-stakes conversations.
+meetings, clinical appointments, important conversations, and downstream applications.
 
 **The kid gazette** — a daily printed newspaper that lands in the printer
-tray when your kid gets home. Personalized quotes, real household missions,
-a daily checklist, and a points system. Runs automatically once set up.
+tray when your kid is ready for it. Personalized quotes, real household missions,
+a daily checklist, and a points system. Can run automatically once set up.
 
-The two are connected: the vault tracks who your child is and what's working;
+The two are connected: the vault tracks who your child is and what's working over time;
 the gazette uses that to keep what it puts in front of them fresh and calibrated.
 
 ---
 
 ## What you need
 
-- [Claude Code](https://claude.ai/code) (free tier works)
-- For the gazette: a printer and a Mac or PC that stays on during the day
+- [Claude Code](https://claude.ai/code) (free tier works) or Codex
+- For the gazette: a printer and a Mac or PC that stays on during the day (if you want it to auto-print)
 
-That's it. No coding required.
+No coding required.
 
 ---
 
@@ -67,7 +67,7 @@ Claude Code will read your vault and use it to inform the gazette's content, so 
 ## Keeping it going
 
 **Adding a new observation or meeting summary:**
-Record a voice note after school meetings, practitioner calls, or notable days at home. See `caseworker-vault/TRANSCRIPTION_PROJECT_PROMPT.md` for a ready-made Claude or ChatGPT project that turns raw voice transcripts into structured notes. Drop the output in `raw/`, then say:
+Record a voice note after school meetings, practitioner calls, or your observations from notable moments with your child. See `caseworker-vault/TRANSCRIPTION_PROJECT_PROMPT.md` for a ready-made Claude or ChatGPT project that turns raw voice transcripts into structured notes. Drop the output in `raw/`, then say:
 
 > "Ingest the new source."
 
@@ -80,7 +80,7 @@ Claude Code reads your vault and the log, recommends what to add or retire from 
 
 **Before a school or clinical meeting:**
 
-> "Help me prep for the meeting on Thursday."
+> "Help me prep for the meeting on Thursday with the school counselor."
 
 Claude Code reads the vault, surfaces the relevant evidence, drafts questions grounded in what's documented, and flags what gaps the meeting could fill.
 
@@ -94,29 +94,30 @@ The gazette solves a different problem: consistent delivery. It's easy to think 
 
 **The most important thing I figured out building this:**
 
-You hold the knowledge. The AI holds the labor.
+You, the parent, hold the knowledge. The AI holds the labor.
 
-You know your kid responds well to intellectual identity framing. You know they're obsessed with Roman engineering. You know your family reads Mishnah at dinner. You know which household skills you want them to have by the time they leave home. None of that is in any training dataset — it lives in your head.
+You know what your kid will respond wellto, what they are obsessed with, what your family talks about at dinner, the cadence of your week, what skills you'd like your child to master. All of that lives in your head, for each of your children.
 
 The AI's job is to take that knowledge and turn it into 40 well-sourced culture bites, 30 calibrated missions, a print layout, a meeting brief. Given your input, it produces in minutes what would take you days. You are not asking the AI to figure out what matters about your child. You are the expert on your child. You're asking the AI to do the labor.
 
 ---
 
-## What else I've built on this
+## What else you can build with this: Extensions
 
 Things not yet in this repo:
 
-- **Trip booklets** — before a trip to Vienna I generated personalized printed booklets for each kid: age-appropriate background on what we'd see, custom itineraries, blank stamp pages. Built from their knowledge bases, printed and folded.
-- **Daily family brief** — which kids are home, what energy level to expect, what the afternoon plan is. Generated from the calendar and the knowledge bases.
-- **Video content curation** — a queue of podcast and YouTube content matched to each kid's current interests and learning goals, updated from the vault.
+- **Travel activities** — Personalized printed activity booklets for each kid for a trip: Built from their knowledge bases, printed and folded.
+- **Daily family brief** — Life ops. Set up the home in 5 minutes for the after school rhythm. Generated from the calendar and the knowledge bases.
+- **Video content curation** — a queue of podcast and YouTube content matched to each kid's current interests and my values and aesthetics, updated from the vault.
+- **Physical library catalogue** — our family's catalogue of books, served to life ops and the gazette for learning progression and activity management.
 
-If you build something on top of this, I'd like to hear about it.
+If you build something on top of this, I'd love to hear about it.
 
 ---
 
 ## Related
 
-[tradclaw](https://github.com/ChatPRD/tradclaw) by [@clairevo](https://x.com/clairevo) is an OpenClaw scaffold for household ops — calendar briefs, school triage, meal planning, shopping, custom bedtime stories. It's the daily logistics layer.
+[tradclaw](https://github.com/ChatPRD/tradclaw) by [@clairevo](https://x.com/clairevo) is an OpenClaw scaffold for household ops — calendar briefs, school triage, meal planning, shopping, custom bedtime stories. It's my daily logistics layer.
 
 Tradclaw answers "what do I need to do this morning." The caseworker vault answers "what do I know about my kid and how do I advocate for them." They're meant to work together.
 
