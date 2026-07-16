@@ -1,161 +1,126 @@
 # Child Knowledge Stack
 
-A per-child knowledge base that acts as a caseworker, plus a services layer that consumes it.
+Two tools for parents who want AI that actually knows their kid.
+
+**The caseworker vault** — an Obsidian knowledge base that keeps everything
+you know about your child organized, synthesized, and ready for school
+meetings, clinical appointments, and high-stakes conversations.
+
+**The kid gazette** — a daily printed newspaper that lands in the printer
+tray when your kid gets home. Personalized quotes, real household missions,
+a daily checklist, and a points system. Runs automatically once set up.
+
+The two are connected: the vault tracks who your child is and what's working;
+the gazette uses that to keep what it puts in front of them fresh and calibrated.
 
 ---
 
-## The idea
+## What you need
 
-In 2023, Andrej Karpathy described building a [personal wiki](https://karpathy.ai/llmwiki) as a second brain for working with LLMs: raw sources → synthesized knowledge → AI that knows your context. Ben Kamens extended it into [hstack](https://github.com/kamens/hstack), a health-specific case management system for navigating complex medical situations.
+- [Claude Code](https://claude.ai/code) (free tier works)
+- For the gazette: a printer and a Mac or PC that stays on during the day
 
-I took the same architecture and applied it to parenting — specifically to advocating for a gifted child within school and clinical systems. Giftedness is a special need. The school meetings, the assessments, the gap between what a professional sees in a 45-minute evaluation and what you see at home over years — it all calls for the same thing Karpathy was describing: a maintained, evidence-based, AI-readable picture of a person that you can query, update, and use to prepare for high-stakes conversations.
-
-Then I added a second layer.
-
-Once a knowledge base exists for each kid, it can power downstream services. Not just "chat with your kid's data" — actual outputs that run on a schedule and land in the physical world. My kids get a personalized daily newspaper in the printer tray when they get home from school. When we travel, I build them printed booklets with custom itineraries. The knowledge base is the source; the services are what it produces.
-
-This repo packages both layers so you can use them, fork them, or take the idea somewhere I haven't.
+That's it. No coding required.
 
 ---
 
-## Architecture
+## Get started
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                   caseworker-vault/                      │
-│                                                         │
-│   raw/          ──►   wiki/          ──►   AI context   │
-│   (sources)           (synthesis)          (meetings,   │
-│                                             planning)   │
-└─────────────────────────────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────┐
-│                    services layer                        │
-│                                                         │
-│   kid-gazette/      daily newspaper, printed            │
-│   (this repo)       on a cron, physically in            │
-│                     the printer tray at 3pm             │
-│                                                         │
-│   [trip booklets]   per-trip A5 printed activity        │
-│   [audio content]   personalized podcast queues         │
-│   [daily briefs]    afternoon planning for the parent   │
-└─────────────────────────────────────────────────────────┘
-```
+### Option A — The caseworker vault
 
-The vault and the gazette are independent — you can use either without the other. But the design intent is that the vault tells you *who the child is*, and the services use that to produce things calibrated to that child.
+**Step 1.** Download this repo. Click the green **Code** button above → **Download ZIP** → unzip it.
+
+**Step 2.** Open [Obsidian](https://obsidian.md) (free). Open the `caseworker-vault` folder as a vault. Browse around — the demo follows a fictional child named Maya Chen so you can see what a live vault looks like.
+
+**Step 3.** Open Claude Code in the `caseworker-vault` folder. Say:
+
+> "Help me set up this vault for my child."
+
+Claude Code will read the setup instructions and walk you through it — clearing the demo content, writing a first profile from what you tell it, and getting your vault ready to receive real notes.
 
 ---
 
-## What's in this repo
+### Option B — The kid gazette
 
-### `caseworker-vault/`
+**Step 1.** Download this repo (same as above).
 
-An Obsidian vault structured as a caseworker's case file — for a child, not a patient. The demo uses Maya Chen, a fictional nine-year-old.
+**Step 2.** Open `kid-gazette/MY_CHILD.md` in any text editor. Fill it out — it asks about your child in plain English: their personality, interests, the values you want to pass on, what household skills you want them building. This is the important step, and it's yours to do. The AI doesn't know your kid. You do.
 
-```
-caseworker-vault/
-├── AGENTS.md              AI maintenance rules
-├── raw/                   source material (meeting notes, reports, voice notes)
-├── wiki/                  synthesized knowledge (profile, plans, open questions)
-└── templates/             intake formats for new sources
-```
+**Step 3.** Open Claude Code in the `kid-gazette` folder. Say:
 
-**How to use it:**
-1. Duplicate the vault and replace Maya's content with your child's.
-2. Add source material to `raw/` as meetings happen and assessments arrive.
-3. Ask an AI assistant (Claude, ChatGPT, etc.) to ingest a new source and update the wiki according to `AGENTS.md`.
-4. Before school or clinical meetings, open `wiki/school-meeting-plan.md` and ask the AI to draft questions or prep a brief.
+> "Set up the gazette for [child's name] using MY_CHILD.md."
 
-The `AGENTS.md` defines the non-negotiable rules for the AI: never invent facts, separate observation from interpretation, cite sources, preserve disagreements between practitioners rather than silently resolving them. These rules matter — without them, the AI will confidently fill gaps with plausible-sounding nonsense.
-
-**What I use it for:**
-- Preparing for IEP-adjacent school meetings
-- Tracking what different practitioners have said and where they disagree
-- Running a 30-day home intervention plan and logging what's actually working
-- Drafting email requests to school staff that are grounded in documented evidence
-
-### `kid-gazette/`
-
-A daily printed newspaper generator. Runs on a cron, pulls rotating content from a JSON bank, renders an HTML template, converts to PDF, and sends to the printer.
-
-```
-kid-gazette/
-├── scripts/
-│   ├── generate.py        main generator
-│   ├── calendar_check.py  optional: skip days based on an iCal file
-│   └── points.py          optional: points ledger for earned rewards
-├── templates/
-│   └── newspaper.html     print-ready newspaper layout
-├── content_bank/
-│   └── example-kid.json   content bank template (Maya Chen demo)
-└── README.md              setup guide
-```
-
-**How to use it:**
-1. Copy `content_bank/example-kid.json` → `content_bank/yourchild.json`
-2. Fill in culture bites, missions, and checklist items (see `CONTENT_STYLE_GUIDE.md`)
-3. Run `python3 scripts/generate.py yourchild --no-print` to preview
-4. Set a cron to run daily and print automatically
-
-**What the newspaper contains:**
-- A rotating culture bite (quote, short story, or riddle) from a curated bank
-- A "Special Assignment" — a rotating real-world mission (cooking a meal, learning a repair, a household contribution)
-- A fixed daily checklist with point values
-- Optional sections: a listening/podcast prompt, a journal prompt, a reading passage
-
-The content bank rotates without repeats until exhausted, then reshuffles — so with 40+ entries per section you get months without repetition.
+Claude Code will generate a full content bank from what you wrote — 40+ quotes and culture bites drawn from the sources you named, 30+ real household missions calibrated to your kid's age, a daily checklist matching their routine — and walk you through connecting it to your printer and setting a print schedule. You won't touch any code.
 
 ---
 
-## What makes this different from just prompting an AI
+### Both together
 
-The vault solves a specific problem: **continuity across time**. A one-off AI conversation forgets everything when the session ends. A maintained vault means:
+If you want the vault and the gazette connected — so the newspaper adapts as you learn more about your kid — set up the vault first, then the gazette. When you're ready, say:
 
-- The AI always has the full picture, not just what you remember to mention today
-- New information (a new assessment, a new observation) gets integrated into a running model, not just noted once and lost
-- You can ask "what has changed since October" and get an actual answer because October's raw notes are still there
-- Disagreements between practitioners stay visible instead of being overwritten by the most recent voice
+> "Seed Maya's gazette profile from the caseworker vault."
 
-The gazette solves a different problem: **consistent delivery**. The knowledge base tells you your child responds well to structure, intellectual identity framing, and real household contribution. The gazette operationalizes that — it shows up every day, without you having to remember to make it happen.
+Claude Code will read your vault and use it to inform the gazette's content, so you're not filling out `MY_CHILD.md` from scratch.
 
 ---
 
-## Extending this
+## Keeping it going
 
-Things I've built on top of this same foundation, not yet in this repo:
+**Adding a new observation or meeting summary:**
+Record a voice note after school meetings, practitioner calls, or notable days at home. See `caseworker-vault/TRANSCRIPTION_PROJECT_PROMPT.md` for a ready-made Claude or ChatGPT project that turns raw voice transcripts into structured notes. Drop the output in `raw/`, then say:
 
-- **Trip booklets** — for a Vienna trip I generated personalized A5 saddle-stitch booklets, one per kid, with custom itineraries, age-appropriate background on what we'd see, and blank stamp/sticker pages. Built in Python, printed on A4, folded and stapled.
-- **Daily family brief** — a structured context doc (which kids are home, what energy level to expect, what the afternoon plan is) generated from the calendar and kid knowledge bases before each afternoon.
-- **Video content curation** — a queue of YouTube/podcast content matched to the kid's current interests and learning goals, updated from the knowledge base.
+> "Ingest the new source."
+
+**When the gazette feels stale:**
+Drop a note in `caseworker-vault/wiki/gazette-log.md` — "the Archimedes quote didn't land," "she's been asking about bridges." When you've accumulated a few, say:
+
+> "Curate Maya's gazette."
+
+Claude Code reads your vault and the log, recommends what to add or retire from the content bank, and updates the gazette profile. The newspaper adapts without you managing it by hand.
+
+**Before a school or clinical meeting:**
+
+> "Help me prep for the meeting on Thursday."
+
+Claude Code reads the vault, surfaces the relevant evidence, drafts questions grounded in what's documented, and flags what gaps the meeting could fill.
+
+---
+
+## What makes this worth the setup
+
+A one-off AI conversation forgets everything when the session ends. A maintained vault means the AI always has the full picture — years of observations, what different practitioners have said, where they disagree, what's been tried and what worked. You can ask "what's changed since October" and get an actual answer.
+
+The gazette solves a different problem: consistent delivery. It's easy to think "I should expose my kid to more classical music, or more Stoic philosophy, or more real cooking." It's hard to make that happen reliably every day. The gazette does it without you having to think about it.
+
+**The most important thing I figured out building this:**
+
+You hold the knowledge. The AI holds the labor.
+
+You know your kid responds well to intellectual identity framing. You know they're obsessed with Roman engineering. You know your family reads Mishnah at dinner. You know which household skills you want them to have by the time they leave home. None of that is in any training dataset — it lives in your head.
+
+The AI's job is to take that knowledge and turn it into 40 well-sourced culture bites, 30 calibrated missions, a print layout, a meeting brief. Given your input, it produces in minutes what would take you days. You are not asking the AI to figure out what matters about your child. You are the expert on your child. You're asking the AI to do the labor.
+
+---
+
+## What else I've built on this
+
+Things not yet in this repo:
+
+- **Trip booklets** — before a trip to Vienna I generated personalized printed booklets for each kid: age-appropriate background on what we'd see, custom itineraries, blank stamp pages. Built from their knowledge bases, printed and folded.
+- **Daily family brief** — which kids are home, what energy level to expect, what the afternoon plan is. Generated from the calendar and the knowledge bases.
+- **Video content curation** — a queue of podcast and YouTube content matched to each kid's current interests and learning goals, updated from the vault.
 
 If you build something on top of this, I'd like to hear about it.
 
 ---
 
-## The division of labor
+## Related
 
-The most important thing I figured out building this:
+[tradclaw](https://github.com/ChatPRD/tradclaw) by [@clairevo](https://x.com/clairevo) is an OpenClaw scaffold for household ops — calendar briefs, school triage, meal planning, shopping, custom bedtime stories. It's the daily logistics layer.
 
-**You hold the knowledge. The AI holds the labor.**
-
-You know your kid responds well to intellectual identity framing. You know they're obsessed with Roman engineering. You know your family reads Mishnah at dinner and cares about the American founding. You know which household skills you want them to have by the time they leave home. None of that is in any training dataset. It lives in your head.
-
-What the AI is good at: taking that knowledge and generating 40 well-chosen Pirkei Avot quotes with accurate citations, 30 age-calibrated household missions, a point system, a print layout. Given your inputs, it can produce in minutes what would take you days — and it won't run out of material.
-
-This is why the onboarding for the gazette isn't "here's the JSON schema, go fill it in." It's a plain-English questionnaire about your kid — their interests, your values, the texts you care about, the skills you want to teach. You fill that out. You hand it to Claude Code. Claude Code writes the content bank.
-
-The same principle applies to the caseworker vault. You're not prompting the AI to figure out what matters about your child — you're feeding it everything you already know, and asking it to maintain, synthesize, and surface it on demand.
-
-This is different from "AI as expert." The AI is not the expert on your kid. You are. The AI is a very fast, very patient research assistant and content generator that works with what you give it.
+Tradclaw answers "what do I need to do this morning." The caseworker vault answers "what do I know about my kid and how do I advocate for them." They're meant to work together.
 
 ---
-
-## Related: tradclaw
-
-[tradclaw](https://github.com/ChatPRD/tradclaw) by [@clairevo](https://x.com/clairevo) is an OpenClaw scaffold for household ops — calendar briefs, school triage, meal planning, shopping lists, helper payments, custom bedtime stories. It's the daily logistics layer.
-
-The two projects sit at different levels. Tradclaw handles what happens today: what's on the calendar, what's for dinner, what came in from school. The caseworker vault handles what's true over years: who your child is, what the evidence shows, what's been tried. They're meant to be used together — tradclaw answers "what do I need to do this morning," the caseworker vault answers "what do I know about my kid and how do I advocate for them."
 
 ## Credits
 
