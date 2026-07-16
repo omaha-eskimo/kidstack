@@ -1,22 +1,109 @@
-# Demo Child Caseworker Vault
+# Child Caseworker Vault
 
 > [!IMPORTANT]
-> Every person, event, and detail in this vault is fictional. This vault is designed for demonstrations and screen recordings.
+> Every person, event, and detail in this vault is fictional. This vault is
+> designed for demonstrations. Replace Maya Chen's content with your child's.
 
-This is an example of an AI-maintained, human-directed caseworking system for coordinating support around a child.
+An AI-maintained, human-directed knowledge base for coordinating support around
+a child with complex needs — learning differences, giftedness, chronic health
+issues, or any situation that involves multiple schools, practitioners, and
+years of accumulated context.
+
+---
+
+## The idea
+
+You know more about your child than any teacher, clinician, or specialist ever
+will. They see your child for 45 minutes, or for one school year, or through
+the lens of a single discipline. You have years of observation, a picture of
+how your child functions across all settings, and a memory of what's been tried
+and what worked.
+
+The caseworker vault is a structured place to keep that knowledge so it's
+useful — queryable, synthesized, ready to bring to a meeting. You add raw
+material; the AI maintains the synthesis.
+
+---
 
 ## Architecture
 
-1. `raw/` preserves source material as evidence.
-2. `wiki/` holds the current synthesized understanding.
-3. `templates/` makes new information consistent and easier to ingest.
-4. `AGENTS.md` defines how an AI assistant may maintain the system.
+```
+caseworker-vault/
+├── raw/           source material, preserved exactly as received
+│   ├── school/    meeting notes, emails, reports
+│   ├── home/      your own observations
+│   ├── treatment/ practitioner notes, assessment results
+│   └── voice-notes/  transcribed voice observations
+├── wiki/          synthesized knowledge — current understanding
+├── templates/     intake formats for new sources
+├── AGENTS.md      rules for how the AI may maintain this vault
+└── CLAUDE.md      Claude Code commands for ingest and prep
+```
 
-Start with [[wiki/start-here|Start Here]], open [[wiki/index|Case Wiki Index]], or use [[architecture.canvas|Architecture Canvas]] for a visual tour.
+`raw/` is the source of truth. `wiki/` is derived from it and should always
+cite back to raw sources. The AI updates `wiki/`; you update `raw/`.
 
-## Demonstration Path
+---
 
-For a short screen recording, open these pages in order:
+## Day-to-day workflow
+
+### Adding a new observation or meeting summary
+
+The fastest path is a voice note. After a school meeting, a practitioner call,
+or a notable day at home — record 60–90 seconds while it's fresh. You don't
+need to be organized; speak in whatever order things come to you.
+
+**To transcribe and structure the note:**
+
+Set up the transcription project once using `TRANSCRIPTION_PROJECT_PROMPT.md`.
+This gives you a Claude or ChatGPT project that takes raw voice transcripts and
+returns structured markdown. Paste the transcript in, copy the output, save it
+to `raw/`.
+
+**To ingest into the wiki:**
+
+Open Claude Code in this folder and say:
+
+> "Ingest raw/voice-notes/2026-07-16-after-school-observation.md"
+
+Claude Code will read the source, update the relevant wiki pages, add open
+questions and tasks, and log the change. See `CLAUDE.md` for the full list of
+commands.
+
+### Before a meeting
+
+> "Help me prep for the school meeting on Thursday."
+
+Claude Code reads the current wiki and produces an agenda, a list of evidence-
+grounded questions to bring, and a note on what gaps the meeting could fill.
+
+### Getting a current picture
+
+> "What's changed since May?"
+
+> "Draft a one-pager for the new teacher."
+
+> "What are the open questions?"
+
+---
+
+## Setup
+
+1. **Duplicate this vault.** Copy the folder and rename it for your child.
+2. **Clear the demo content.** Delete the contents of `raw/` and `wiki/`
+   (keep the file structures). You can keep the templates.
+3. **Seed the wiki.** Add a first note to `raw/` describing your child — who
+   they are, what the situation is, what's been tried. Then ask Claude Code to
+   ingest it and create the initial wiki pages.
+4. **Set up the transcription project.** Follow the instructions in
+   `TRANSCRIPTION_PROJECT_PROMPT.md` to create a Claude or ChatGPT project for
+   turning voice notes into structured markdown.
+
+---
+
+## Demonstration path
+
+For a screen recording or walkthrough, open these in order:
 
 1. [[architecture.canvas|Architecture Canvas]]
 2. [[raw/school/2026-05-14-teacher-meeting|Raw teacher meeting]]
